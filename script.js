@@ -14,27 +14,27 @@ async function checkweather(city) {
     document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
     document.querySelector(".wind").innerHTML = data.wind.speed + "km/h";
 
-    if (data.weather[0].main == 'Clouds') {
-      //  document.getElementsByClassName('card').style.backgroundImage="url('images/cloudweath.png')";
-         weatherIcon.src = "images/clouds.png";
+    if (data.weather[0].main === 'Clouds') {
+        weatherIcon.src = "https://cdn-icons-png.flaticon.com/512/414/414825.png";
     }
     else if (data.weather[0].main == 'Mist') {
-    weatherIcon.src = "images/mist.png"
+       weatherIcon.src = "https://cdn-icons-png.flaticon.com/512/1197/1197102.png";
+
     }
     else if (data.weather[0].main == 'Rain') {
-       // document.getElementsByClassName('card').style.backgroundImage="url(images/rain weath.png)";
-       weatherIcon.src = "images/rain.png"
+        // document.getElementsByClassName('card').style.backgroundImage="url(images/rain weath.png)";
+        weatherIcon.src = "https://cdn-icons-png.flaticon.com/512/1163/1163624.png";
 
     }
     else if (data.weather[0].main == 'Haze') {
-      //  document.getElementsByClassName('card').style.backgroundImage="url(images/rain weath.png)";
-         weatherIcon.src ="images/rain.png"
+        //  document.getElementsByClassName('card').style.backgroundImage="url(images/rain weath.png)";
+        weatherIcon.src = "https://cdn-icons-png.flaticon.com/512/4005/4005901.png";
     }
-    else if (data.weather[0].main == 'Drizzel'){
-        weatherIcon.src = "images/drizzel.png"
+    else if (data.weather[0].main == 'Drizzel') {
+        weatherIcon.src = "https://cdn-icons-png.flaticon.com/512/1163/1163657.png";
     }
     else {
-        weatherIcon.src = "images/clear.png"
+        weatherIcon.src = "https://cdn-icons-png.flaticon.com/512/869/869869.png";
     }
     document.querySelector(".weather").style.display = "block";
 }
